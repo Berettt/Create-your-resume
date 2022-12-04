@@ -16,7 +16,7 @@ class CV (models.Model):
     date_of_birth = models.CharField(max_length=11,default="")
     bio = models.TextField(blank=True)
     education = models.CharField(max_length=10,choices=education_choices.choices,default=education_choices.Secondary)
-    school = models.CharField(max_length=50,blank=True)
+    school = models.CharField(max_length=50)
     experience = models.TextField(blank=True)
     skills = models.TextField(blank=True)
 

@@ -9,15 +9,25 @@
     <style>
 
         #up{
-
-            display: inline-block;
+            float: left;
             text-align: center;
 
             
         }
 
         .names{
-            font-size: 40px;
+            float: left;
+            font-size: 30px;
+        }
+
+        #img{
+            
+
+            float: left;
+            width: 10px;
+        }
+        #t{
+            font-size: 65px;
         }
         
     </style>
@@ -26,13 +36,37 @@
 
     <div id="up">
         <h1 class="names">
-            {{myvar.First_Name}}
-            <br>
-            {{myvar.Last_Name}}
+
+            <div id="t">
+                <img class="x" src=media/{{myvar.Pfp}} width="120" height="170">
+                <span style="color:white">--</span>
+                {{myvar.First_Name}}
+                {{myvar.Last_Name}}
+            </div>
+
+            {{myvar.date_of_birth}}
+            <hr>
         </h1>
-        
-        
-    <img id="a" src=media/{{myvar.Pfp}} width="150" height="150">
+
+    <div id="personal">
+        <h2>Education and school</h2> {{myvar.education}} | {{myvar.school}}
+    </div>
+
+    <div id="bio">
+
+        <h6>{{myvar.bio}}</h6>
+
+        <h2>My experience:</h2> {{myvar.experience}}
+        <h2>My skills:</h2> {{myvar.skills}}
+    </div>
+
+    <div id="contact">
+        <h1>Contact me!</h1>
+        <h2>Phone number: {{myvar.phone}}</h2>
+        <h2>E-mail: {{myvar.email}}</h2>
+    </div>
+
+    
     
         
 
